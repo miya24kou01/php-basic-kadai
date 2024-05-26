@@ -14,7 +14,7 @@
  ?>
 
 <?php
- $personal_data=['id'=>'1','name'=>'侍太郎','age'=>'30'];
+ $personal_data=['id'=>'1','名前'=>'侍太郎','年齢'=>'30'];
  foreach($personal_data as $key=>$value){
     echo"{$key}:{$value}<br>";
  }
