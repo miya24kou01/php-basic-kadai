@@ -12,6 +12,13 @@
     echo"{$key}:{$value}<br>";
  }
  ?>
+
+<?php
+ $personal_data=['id'=>'1','name'=>'侍太郎','age'=>'30'];
+ foreach($personal_data as $key=>$value){
+    echo"{$key}:{$value}<br>";
+ }
+ ?>
 </p>
 
 </body>
