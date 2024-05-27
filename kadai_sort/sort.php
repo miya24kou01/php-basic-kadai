@@ -36,6 +36,10 @@ echo "降順にソートします\n".'<br>';
 foreach ($nums as $num) {
     echo $num . "\n".'<br>';
 }
+
+$nums = [15, 4, 18, 23, 10];
+sort_2way($nums, TRUE);
+sort_2way($nums, FALSE);
   ?>
  </p>  
 </body>
