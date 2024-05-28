@@ -6,41 +6,30 @@
 </head>
 <body>
  <p>
-  <?php
-  function sort_2way(&$array, $order) {
-    if ($order === true) {
-        // 昇順にソート
-        sort($array);
-    } elseif ($order === false) {
-        // 降順にソート
-        rsort($array);
+ <?php
+    function sort_2way($array, $order){
+       // $nums =[15,4,18,23,10]; // もともとここで定義していた配列を関数の引数として渡すように変更
+ 
+      if($order){
+        echo '昇順にソートします。<br>';
+        sort($array); // 修正箇所: 第二引数を削除
+        foreach($array as $num){
+          echo $num . '<br>';
+        }
+      }
+      else{
+        echo '降順にソートします。<br>';
+        rsort($array); // 修正箇所: 第二引数を削除
+        foreach($array as $num){
+          echo $num . '<br>';
+        }
+      }
     }
-}
-
-// ソートする配列を宣言
-$nums = [15, 4, 18, 23, 10];
-
-// 昇順にソートします
-sort_2way($nums, true);
-echo "昇順にソートします\n".'<br>';
-foreach ($nums as $num) {
-    echo $num . "\n".'<br>';
-}
-
-// ソートする配列を再宣言（順序の変更を確認するため）
-$nums = [15, 4, 18, 23, 10];
-
-// 降順にソートします
-sort_2way($nums, false);
-echo "降順にソートします\n".'<br>';
-foreach ($nums as $num) {
-    echo $num . "\n".'<br>';
-}
-
-$nums = [15, 4, 18, 23, 10];
-sort_2way($nums, TRUE);
-sort_2way($nums, FALSE);
-  ?>
+    
+    $nums = [15,4,18,23,10]; // 配列を関数の外で定義し、その配列を関数に渡す
+    sort_2way($nums, TRUE);  // 昇順でソート
+    sort_2way($nums, FALSE); // 降順でソート
+    ?>
  </p>  
 </body>
 </html>
